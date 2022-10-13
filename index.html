@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>Time tracking dashboard</title>
+  </head>
+  <body>
+    <h1 class="web-title" id="period">Daily</h1>
+    <main class="container">
+      <div class="wrapper">
+        <section class="main">
+          <div class="card-user">
+            <div class="user">
+              <figure class="user__figure">
+                <img class="user__avatar" src="./images/image-jeremy.png" alt="Jeremy Robson" />
+              </figure>
+              <div class="user__information">
+                <span>Report for</span>
+                <h2 class="user__name">Jeremy Robson</h2>
+              </div>
+            </div>
+            <div class="periods">
+              <ul class="periods__list">
+                <li class="periods__item">
+                  <input type="radio" name="period" onchange="handleClick()" class="periods__option" value="daily" id="daily" />
+                  <label for="daily">Daily</label>
+                </li>
+                <li class="periods__item">
+                  <input
+                    type="radio"
+                    name="period"
+                    onchange="handleClick()"
+                    class="periods__option"
+                    value="weekly"
+                    id="weekly"
+                    checked
+                  />
+                  <label for="weekly">Weekly</label>
+                </li>
+                <li class="periods__item">
+                  <input
+                    type="radio"
+                    name="period"
+                    onchange="handleClick()"
+                    class="periods__option"
+                    value="monthly"
+                    id="monthly"
+                  />
+                  <label for="monthly">Monthly</label>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="information__list">
+            <div class="card__information" style="--bg-dynamic: url('../images/icon-work.svg'), hsl(15, 100%, 70%)">
+              <div class="information">
+                <div class="information__header">
+                  <strong class="information__describe">Work</strong>
+                  <figure>
+                    <img src="./images/icon-ellipsis.svg" alt="Icon ellipsis" class="icon-ellipsis" />
+                  </figure>
+                </div>
+                <div class="information__body">
+                  <strong><span id="work-hours">32</span>hrs</strong>
+                  <span>Last Week - <span id="work-oldHours">36</span>hrs</span>
+                </div>
+              </div>
+            </div>
+            <div class="card__information" style="--bg-dynamic: url('../images/icon-play.svg'), hsl(195, 74%, 62%)">
+              <div class="information">
+                <div class="information__header">
+                  <strong class="information__describe">Play</strong>
+                  <figure>
+                    <img src="./images/icon-ellipsis.svg" alt="Icon ellipsis" class="icon-ellipsis" />
+                  </figure>
+                </div>
+                <div class="information__body">
+                  <strong><span id="play-hours">10</span>hrs</strong>
+                  <span>Last Week - <span id="play-oldHours">8</span>hrs</span>
+                </div>
+              </div>
+            </div>
+            <div class="card__information" style="--bg-dynamic: url('../images/icon-study.svg'), hsl(348, 100%, 68%)">
+              <div class="information">
+                <div class="information__header">
+                  <strong class="information__describe">Study</strong>
+                  <figure>
+                    <img src="./images/icon-ellipsis.svg" alt="Icon ellipsis" class="icon-ellipsis" />
+                  </figure>
+                </div>
+                <div class="information__body">
+                  <strong><span id="study-hours">4</span>hrs</strong>
+                  <span>Last Week - <span id="study-oldHours">7</span>hrs</span>
+                </div>
+              </div>
+            </div>
+            <div class="card__information" style="--bg-dynamic: url('../images/icon-exercise.svg'), hsl(145, 58%, 55%)">
+              <div class="information">
+                <div class="information__header">
+                  <strong class="information__describe">Exersice</strong>
+                  <figure>
+                    <img src="./images/icon-ellipsis.svg" alt="Icon ellipsis" class="icon-ellipsis" />
+                  </figure>
+                </div>
+                <div class="information__body">
+                  <strong><span id="exercise-hours">4</span>hrs</strong>
+                  <span>Last Week - <span id="exercise-oldHours">5</span>hrs</span>
+                </div>
+              </div>
+            </div>
+            <div class="card__information" style="--bg-dynamic: url('../images/icon-social.svg'), hsl(264, 64%, 52%)">
+              <div class="information">
+                <div class="information__header">
+                  <strong class="information__describe">Social</strong>
+                  <figure>
+                    <img src="./images/icon-ellipsis.svg" alt="Icon ellipsis" class="icon-ellipsis" />
+                  </figure>
+                </div>
+                <div class="information__body">
+                  <strong><span id="social-hours">5</span>hrs</strong>
+                  <span>Last Week - <span id="social-oldHours">10</span>hrs</span>
+                </div>
+              </div>
+            </div>
+            <div class="card__information" style="--bg-dynamic: url('../images/icon-self-care.svg'), hsl(43, 84%, 65%)">
+              <div class="information">
+                <div class="information__header">
+                  <strong class="information__describe">Self Care</strong>
+                  <figure>
+                    <img src="./images/icon-ellipsis.svg" alt="Icon ellipsis" class="icon-ellipsis" />
+                  </figure>
+                </div>
+                <div class="information__body">
+                  <strong><span id="self-care-hours">2</span>hrs</strong>
+                  <span>Last Week - <span id="self-care-oldHours">2</span>hrs</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
